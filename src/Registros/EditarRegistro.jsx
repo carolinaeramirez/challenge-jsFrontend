@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import Moment from "moment";
 export default function EditarRegistro(props) {
   const params = useParams();
   const [form, setForm] = useState({
@@ -48,23 +48,33 @@ export default function EditarRegistro(props) {
     props.history.push("/");
   };
   return (
-    <div>
-      <div>
+    <div className="form">
+      <div >
+        <label className="labelFecha">Fecha:</label>
         <input
-          type="text"
+          className="inputFecha"
+          type="date"
           name="fecha"
           placeholder="Fecha aaaa-mm-dd"
-          value={form.fecha}
+          value={Moment.utc(form.fecha).format("YYYY-MM-DD")}
           onChange={handleChangeFecha}
         />
+      </div>
+      <div>
+        <label className="labelConcepto">Concepto:</label>
         <input
+          className="inputConcepto"
           type="text"
           name="concepto"
           placeholder="Concepto"
           value={form.concepto}
           onChange={handleChangeConcepto}
         />
+      </div>
+      <div>
+        <label className="labelMonto">Monto:</label>
         <input
+          className="inputMonto"
           type="text"
           name="monto"
           placeholder="Monto"
@@ -72,7 +82,7 @@ export default function EditarRegistro(props) {
           onChange={handleChangeMonto}
         />
       </div>
-      <div>
+      <div className="buttonGuardar">
         <button onClick={guardar}>Guardar</button>
       </div>
     </div>

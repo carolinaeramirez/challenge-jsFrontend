@@ -34,51 +34,61 @@ export default function AgregarNuevoRegistro(props) {
     props.history.push("/");
   };
 
-
   return (
-    <div>
-      <input
-        type="text"
-        name="fecha"
-        placeholder="Fecha aaaa/mm/dd"
-        value={form.fecha}
-        onChange={handleChangeFecha}
-      />
-      <input
-        type="text"
-        name="concepto"
-        placeholder="Concepto"
-        value={form.concepto}
-        onChange={handleChangeConcepto}
-      />
-      <input
-        type="tect"
-        name="monto"
-        placeholder="$ Monto"
-        value={form.monto}
-        onChange={handleChangeMonto}
-      />
+    <div className="formAddRegister">
+      <div>
+        <label className="labelForm">Fecha:</label>
+        <input className="inputFormAdd"
+          type="date"
+          name="fecha"
+          placeholder="Fecha aaaa/mm/dd"
+          value={form.fecha}
+          onChange={handleChangeFecha}
+        />
+      </div>
+      <div>
+        <label className="labelForm">Concepto:</label>
+        <input
+          className="inputFormAdd"
+          type="text"
+          name="concepto"
+          placeholder="Concepto"
+          value={form.concepto}
+          onChange={handleChangeConcepto}
+        />
+      </div>
+      <div>
+        <label className="labelForm"> Monto: </label>
+        <input className ="inputFormAdd"
+          type="text"
+          name="monto"
+          placeholder="$ Monto"
+          value={form.monto}
+          onChange={handleChangeMonto}
+        />
+      </div>
 
       <div onChange={() => changeTipo}>
-        <input
+        <input className ="toggleIngreso"
           type="radio"
           id="opcionIngreso"
           name="tipo"
           value="ingreso"
           onChange={changeTipo}
-        />{" "}
+        />
         <label for="opcionIngreso">Ingreso</label>
-        <input
+        <input className ="toggleEgreso"
           type="radio"
           id="opcionEgreso"
           name="tipo"
           value="egreso"
           onChange={(e) => changeTipo}
-        />{" "}
+        />
         <label for="opcionEgreso">Egreso</label>
-      </div> 
-      <button onClick={guardar}>Guardar</button>
-      
+      </div>
+      <div className="buttonGuardar">
+        <button onClick={guardar}>Guardar</button>
+      </div>
     </div>
   );
 }
