@@ -50,9 +50,9 @@ export default function EditarRegistro(props) {
   return (
     <div className="form">
       <div >
-        <label className="labelFecha">Fecha:</label>
+        <label className="labelForm">Fecha:</label>
         <input
-          className="inputFecha"
+          className="inputForm"
           type="date"
           name="fecha"
           placeholder="Fecha aaaa-mm-dd"
@@ -61,9 +61,9 @@ export default function EditarRegistro(props) {
         />
       </div>
       <div>
-        <label className="labelConcepto">Concepto:</label>
+        <label className="labelForm">Concepto:</label>
         <input
-          className="inputConcepto"
+          className="inputForm"
           type="text"
           name="concepto"
           placeholder="Concepto"
@@ -72,9 +72,9 @@ export default function EditarRegistro(props) {
         />
       </div>
       <div>
-        <label className="labelMonto">Monto:</label>
+        <label className="labelForm">Monto:</label>
         <input
-          className="inputMonto"
+          className="inputForm"
           type="text"
           name="monto"
           placeholder="Monto"

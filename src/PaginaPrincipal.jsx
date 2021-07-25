@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Moment from "moment";
@@ -88,7 +88,6 @@ export default function PaginaPrincipal() {
                 </td>
                 <td>
                   <Link
-                    to=""
                     className="linkAcciones"
                     onClick={() => borrarRegistro(unRegistro.id)}
                   >

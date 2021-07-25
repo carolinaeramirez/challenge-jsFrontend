@@ -1,8 +1,7 @@
 
 import './App.css';
 import './Styles/PaginaPrincipal.css';
-import './Styles/EditForm.css';
-import './Styles/NewRegister.css';
+import './Styles/Form.css';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import PaginaPrincipal from './PaginaPrincipal';
 import AgregarNuevoRegistro from './Registros/AgregarNuevoRegistro';

@@ -35,10 +35,10 @@ export default function AgregarNuevoRegistro(props) {
   };
 
   return (
-    <div className="formAddRegister">
+    <div className="form">
       <div>
         <label className="labelForm">Fecha:</label>
-        <input className="inputFormAdd"
+        <input className="inputForm"
           type="date"
           name="fecha"
           placeholder="Fecha aaaa/mm/dd"
@@ -49,7 +49,7 @@ export default function AgregarNuevoRegistro(props) {
       <div>
         <label className="labelForm">Concepto:</label>
         <input
-          className="inputFormAdd"
+          className="inputForm"
           type="text"
           name="concepto"
           placeholder="Concepto"
@@ -59,7 +59,7 @@ export default function AgregarNuevoRegistro(props) {
       </div>
       <div>
         <label className="labelForm"> Monto: </label>
-        <input className ="inputFormAdd"
+        <input className ="inputForm"
           type="text"
           name="monto"
           placeholder="$ Monto"
