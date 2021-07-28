@@ -49,7 +49,7 @@ export default function EditarRegistro(props) {
   };
   return (
     <div className="form">
-      <div >
+      <div>
         <label className="labelForm">Fecha:</label>
         <input
           className="inputForm"

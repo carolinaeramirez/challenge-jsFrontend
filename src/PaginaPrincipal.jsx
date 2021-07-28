@@ -106,6 +106,8 @@ export default function PaginaPrincipal() {
 
         <label className="balanceText">Balance: {balance.toString()} </label>
       </div>
+      <Link to={"/ingresos"}>MOSTRAR INGRESOS</Link>
+      <Link to={"/egresos"}>MOSTRAR EGRESOS</Link>
     </div>
   );
 }
